@@ -15,8 +15,8 @@ def process_all_in_categories(
     """
     fps_map = {
         8:  {"id": "7", "max_frames": 480},
-        12: {"id": "b", "max_frames": 720},
-        16: {"id": "f", "max_frames": 960},
+        12: {"id": "B", "max_frames": 720},
+        16: {"id": "F", "max_frames": 960},
         24: {"id": "0", "max_frames": 1440}
     }
     
@@ -65,7 +65,7 @@ def process_all_in_categories(
                     print(f"  警報: 300分制限を超えたため {file_path.name} 以降をスキップ")
                     break
 
-                # 8桁数字ルールの適用（12fps: 先頭 '2'）
+                # 8桁数字ルールの適用（12fps: 先頭 'B'）
                 new_filename = f"{fps_id}{current_minute:03d}{frame_in_minute:04d}.webp"
                 dest_file = out_dir / new_filename
 
